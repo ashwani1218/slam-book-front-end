@@ -8,9 +8,11 @@ const store = configureStore();
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
-        <AppRouter />
-      </Provider>
+      <div className="App">
+        <Provider store={store}>
+          <AppRouter />
+        </Provider>
+      </div>
     );
   }
 }

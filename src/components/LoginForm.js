@@ -42,7 +42,7 @@ class LoginForm extends React.Component {
             onChange={this.onUsernameChange}
           />
           <input
-            type="text"
+            type="password"
             placeholder="password"
             autoFocus
             value={this.state.password}

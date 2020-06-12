@@ -12,3 +12,7 @@ export const addUser = ({
     token,
   },
 });
+
+export const logout = () => ({
+  type: "LOGOUT",
+});

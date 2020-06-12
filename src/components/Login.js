@@ -5,10 +5,17 @@ import { connect } from "react-redux";
 import { addUser } from "../redux/actions/UserActions";
 
 class LoginPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: "",
+    };
+  }
   render() {
     return (
       <div className="login">
         <div className="login-form">
+          {this.state.error && <p>{this.state.error}</p>}
           <LoginForm
             onSubmit={({ username, password }) => {
               axios
@@ -20,7 +27,11 @@ class LoginPage extends React.Component {
                   if (resp.data.response_code === "200") {
                     this.props.dispatch(addUser(resp.data));
                     console.log(resp.data);
-                    this.props.history.push("/");
+                    this.props.history.push("/home");
+                  } else if (resp.data.response_code === "401") {
+                    this.setState(() => ({
+                      error: "Please Provide Correct Credentials",
+                    }));
                   }
                 });
             }}
