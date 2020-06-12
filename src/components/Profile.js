@@ -1,10 +1,10 @@
 import React from "react";
-import Navigation from "./home-components/Navigation";
-import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Header from "./home-components/Header";
+import { Redirect } from "react-router-dom";
+import Navigation from "./home-components/Navigation";
 
-const FindFriends = (props) => {
+const Profile = (props) => {
   return (
     <div className="page-container">
       <Header user={props.user} />
@@ -18,7 +18,7 @@ const FindFriends = (props) => {
           <Navigation />
         </div>
         <div className="page">
-          <h1>Find friends Component</h1>
+          <h1>Profile</h1>
         </div>
       </div>
     </div>
@@ -30,5 +30,4 @@ const mapStateToProps = (state) => {
     user: state.user,
   };
 };
-
-export default connect(mapStateToProps)(FindFriends);
+export default connect(mapStateToProps)(Profile);

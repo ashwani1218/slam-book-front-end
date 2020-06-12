@@ -44,7 +44,7 @@ const Navigation = (props) => {
         <SubMenu icon={<SettingOutlined />} key="sub4" title="Setting">
           <Menu.ItemGroup title="Setting">
             <Menu.Item icon={<UserOutlined />} key="Profile">
-              Profile
+              <NavLink to="/profile">Profile</NavLink>
             </Menu.Item>
             <Menu.Item
               onClick={logoutUser}

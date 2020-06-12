@@ -5,17 +5,19 @@ import Header from "./home-components/Header";
 import Navigation from "./home-components/Navigation";
 
 const Home = (props) => (
-  <div className="home">
-    <div className="nav">
-      <Navigation />
-    </div>
-    <div className="page">
-      {props.user.token === "" ? (
-        <Redirect to="/" />
-      ) : (
-        console.log("valid session")
-      )}
-      <Header user={props.user} />
+  <div className="page-container">
+    <Header user={props.user} />
+    <div className="home">
+      <div className="nav">
+        <Navigation />
+      </div>
+      <div className="page">
+        {props.user.token === "" ? (
+          <Redirect to="/" />
+        ) : (
+          console.log("valid session")
+        )}
+      </div>
     </div>
   </div>
 );

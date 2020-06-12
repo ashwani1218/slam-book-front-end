@@ -1,5 +1,5 @@
 import React from "react";
-import LoginForm from "./LoginForm";
+import LoginForm from "./home-components/LoginForm";
 import axios from "axios";
 import { connect } from "react-redux";
 import { addUser } from "../redux/actions/UserActions";

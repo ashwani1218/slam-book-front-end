@@ -31,19 +31,24 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="form-div">
         {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit={this.onSubmit}>
           <input
+            className="form-input"
+            id="username"
             type="text"
-            placeholder="username"
+            placeholder="Username"
             autoFocus
             value={this.state.username}
             onChange={this.onUsernameChange}
           />
+
           <input
+            className="form-input"
+            id="password"
             type="password"
-            placeholder="password"
+            placeholder="Password"
             autoFocus
             value={this.state.password}
             onChange={this.onPasswordChange}
