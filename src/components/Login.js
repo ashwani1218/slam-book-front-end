@@ -1,6 +1,8 @@
 import React from "react";
 import LoginForm from "./LoginForm";
 import axios from "axios";
+import { connect } from "react-redux";
+import { addUser } from "../redux/actions/UserActions";
 
 class LoginPage extends React.Component {
   render() {
@@ -16,7 +18,8 @@ class LoginPage extends React.Component {
                 })
                 .then((resp) => {
                   if (resp.data.response_code === "200") {
-                    console.log(resp.data.response_description);
+                    this.props.dispatch(addUser(resp.data));
+                    console.log(resp.data);
                     this.props.history.push("/");
                   }
                 });
@@ -28,4 +31,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default LoginPage;
+export default connect()(LoginPage);
