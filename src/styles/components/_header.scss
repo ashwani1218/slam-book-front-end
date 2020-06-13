@@ -1,0 +1,30 @@
+.header {
+    height: 5vh;
+    display: flex;
+    background-color: pink;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo p {
+    margin: 0px;
+
+
+}
+
+.header-body {
+    flex: 10;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

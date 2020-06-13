@@ -11,6 +11,16 @@ class LoginPage extends React.Component {
       error: "",
     };
   }
+  componentDidMount() {
+    try {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        this.props.dispatch(addUser(user));
+      }
+    } catch (e) {
+      //DO NOTHING
+    }
+  }
   render() {
     return (
       <div className="login">
@@ -26,7 +36,8 @@ class LoginPage extends React.Component {
                 .then((resp) => {
                   if (resp.data.response_code === "200") {
                     this.props.dispatch(addUser(resp.data));
-                    console.log(resp.data);
+                    const json = JSON.stringify(resp.data);
+                    localStorage.setItem("user", json);
                     this.props.history.push("/home");
                   } else if (resp.data.response_code === "401") {
                     this.setState(() => ({

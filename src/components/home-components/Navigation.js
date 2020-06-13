@@ -21,10 +21,13 @@ const Navigation = (props) => {
   };
   const logoutUser = () => {
     props.dispatch(logout());
+    const user = { firstname: "", lastname: "", username: "", token: "" };
+    const json = JSON.stringify(user);
+    localStorage.setItem("user", json);
   };
 
   return (
-    <div>
+    <div className="nav-menu">
       <Menu onClick={handleClick} style={{ width: 256 }} mode="vertical">
         <Menu.Item key="Home" icon={<HomeOutlined />} title="Home">
           <NavLink to="/home">Home</NavLink>

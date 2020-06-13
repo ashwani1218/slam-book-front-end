@@ -5,11 +5,22 @@
 
 .nav {
   flex: 1;
+  border-right: 1px solid pink;
+  // background-color: #fce4ec;
+}
+
+.nav {
+  // background-color: #fce4ec;
+}
+
+.nav-menu ul {
+  // background-color: #fce4ec;
 }
 
 .page {
   flex: 5;
 }
+
 .page-container {
   height: 100%;
 }
