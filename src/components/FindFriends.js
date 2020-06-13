@@ -4,13 +4,14 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Header from "./home-components/Header";
 import { addUser } from "../redux/actions/UserActions";
+import Head from "./find-friends-component/Head";
 
 class FindFriends extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-  componentWillMount() {
+  componentDidMount() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
       if (user) {
@@ -34,7 +35,7 @@ class FindFriends extends React.Component {
             ) : (
               console.log("valid session")
             )}
-            <h1>Find friends Component</h1>
+            <Head />
           </div>
         </div>
       </div>

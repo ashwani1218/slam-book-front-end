@@ -10,7 +10,7 @@ class Slams extends React.Component {
     super(props);
     this.state = {};
   }
-  componentWillMount() {
+  componentDidMount() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
       if (user) {

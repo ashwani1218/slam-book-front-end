@@ -1,0 +1,31 @@
+.ff-header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ff-header input {
+  width: 70%;
+  height: 30%;
+  border-radius: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.ff-header input:focus {
+  outline: none;
+}
+.ff-header button:focus {
+  outline: none;
+}
+.ff-header button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ff-header button img {
+  padding: 5px;
+}

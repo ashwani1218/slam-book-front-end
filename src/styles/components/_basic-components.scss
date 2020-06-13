@@ -5,20 +5,43 @@
 
 .nav {
   flex: 1;
-  border-right: 1px solid pink;
-  // background-color: #fce4ec;
-}
-
-.nav {
+  // border-right: 1px solid pink;
   // background-color: #fce4ec;
 }
 
 .nav-menu ul {
-  // background-color: #fce4ec;
+  border: none;
 }
 
+.nav-menu {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid;
+  height: 90%;
+  box-shadow: 0 4px 8px 0 #d66d75, 0 6px 20px 0 #e29587;
+  border-radius: 50px;
+}
+
+.nav-menu:hover {
+  // background-color: #fce4ec;
+  box-shadow: 0 9px 18px 0 #d66d75, 0 12px 24px 0 #e29587;
+}
+
+.nav-user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
 .page {
   flex: 5;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid;
+  height: 90%;
+  box-shadow: 0 2px 4px 0 #d66d75, 0 4px 10px 0 #e29587;
+  border-radius: 50px;
+  overflow: scroll;
 }
 
 .page-container {

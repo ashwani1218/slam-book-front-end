@@ -11,7 +11,7 @@ class Home extends React.Component {
     this.state = {};
   }
 
-  componentWillMount() {
+  componentDidMount() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
       if (user) {
@@ -21,6 +21,7 @@ class Home extends React.Component {
       //DO NOTHING
     }
   }
+
   render() {
     return (
       <div className="page-container">

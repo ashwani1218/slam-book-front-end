@@ -7,7 +7,7 @@ import { addUser } from "../redux/actions/UserActions";
 
 class Profile extends React.Component {
   state = {};
-  componentWillMount() {
+  componentDidMount() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
       if (user) {
@@ -30,7 +30,7 @@ class Profile extends React.Component {
             {JSON.parse(localStorage.getItem("user")).token === "" ? (
               <Redirect to="/" />
             ) : (
-              console.log("invalid session")
+              console.log("valid session")
             )}
             <h1>Profile</h1>
           </div>

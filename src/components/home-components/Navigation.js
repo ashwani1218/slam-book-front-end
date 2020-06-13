@@ -28,6 +28,9 @@ const Navigation = (props) => {
 
   return (
     <div className="nav-menu">
+      <div className="nav-user-profile">
+        <h2>Welcome {props.user.firstname}</h2>
+      </div>
       <Menu onClick={handleClick} style={{ width: 256 }} mode="vertical">
         <Menu.Item key="Home" icon={<HomeOutlined />} title="Home">
           <NavLink to="/home">Home</NavLink>
